@@ -38,3 +38,4 @@ function showFinalMessage() {
     document.getElementById("stage3").classList.add("hidden");
     document.getElementById("finalStage").classList.remove("hidden");
 }
+
