@@ -42,7 +42,50 @@ img {
     margin-top: 20px;
 }
 
-#yes3 {
-    position: absolute;
+/* Floating Hearts Animation */
+.hearts-bg {
+    position: relative;
+    overflow: hidden;
+    animation: hearts-float 5s infinite linear;
 }
+
+@keyframes hearts-float {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Shaking Effect */
+.shake-bg {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Wiggly Background */
+.wiggle-bg {
+    animation: wiggle 1s infinite alternate;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+}
+
+/* Confetti Celebration */
+.confetti-bg {
+    animation: confetti-fall 3s infinite;
+    background-image: url('https://i.imgur.com/dQw4w9h.gif'); /* Replace with confetti GIF */
+    background-size: cover;
+}
+
+@keyframes confetti-fall {
+    0% { background-position: 0 -100px; }
+    100% { background-position: 0 100vh; }
+}
+
 
