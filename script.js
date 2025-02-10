@@ -1,10 +1,9 @@
 document.getElementById("startButton").addEventListener("click", function() {
     document.getElementById("stage1").classList.remove("hidden");
-    this.style.display = "none";
 });
 
 document.getElementById("no1").addEventListener("click", function() {
-    showFinalMessage();
+    showFinalStage();
 });
 
 document.getElementById("yes1").addEventListener("click", function() {
@@ -13,7 +12,7 @@ document.getElementById("yes1").addEventListener("click", function() {
 });
 
 document.getElementById("no2").addEventListener("click", function() {
-    showFinalMessage();
+    showFinalStage();
 });
 
 document.getElementById("yes2").addEventListener("click", function() {
@@ -22,20 +21,24 @@ document.getElementById("yes2").addEventListener("click", function() {
 });
 
 document.getElementById("no3").addEventListener("click", function() {
-    showFinalMessage();
+    showFinalStage();
 });
 
-document.getElementById("yes3").addEventListener("mouseover", function() {
-    let x = Math.random() * (window.innerWidth - this.offsetWidth);
-    let y = Math.random() * (window.innerHeight - this.offsetHeight);
-    this.style.left = x + "px";
-    this.style.top = y + "px";
+document.getElementById("yes3").addEventListener("mouseover", function(event) {
+    event.target.style.position = "absolute";
+    event.target.style.top = Math.random() * window.innerHeight + "px";
+    event.target.style.left = Math.random() * window.innerWidth + "px";
 });
 
-function showFinalMessage() {
+document.getElementById("yes3").addEventListener("click", function() {
+    alert("You really don't need a Valentine! 😂");
+});
+
+function showFinalStage() {
     document.getElementById("stage1").classList.add("hidden");
     document.getElementById("stage2").classList.add("hidden");
     document.getElementById("stage3").classList.add("hidden");
     document.getElementById("finalStage").classList.remove("hidden");
 }
+
 
