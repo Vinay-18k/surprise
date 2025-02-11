@@ -1,91 +1,91 @@
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: Arial, sans-serif;
     text-align: center;
-    background-color: pink;
+    background: #ffe4e1;
+    margin: 0;
     padding: 20px;
 }
 
 h1 {
-    font-size: 2.5em;
     color: red;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .subtitle {
     font-size: 1.5em;
-    font-weight: bold;
+    color: #333;
 }
 
 button {
-    font-size: 1.2em;
     padding: 10px 20px;
+    font-size: 1.2em;
     margin: 10px;
-    border: none;
     cursor: pointer;
-    background-color: white;
+    border: none;
+    background: pink;
     color: black;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 10px;
+    transition: transform 0.2s;
 }
 
 button:hover {
-    background-color: red;
-    color: white;
+    transform: scale(1.1);
 }
 
 .hidden {
     display: none;
 }
 
-img {
-    width: 250px;
+.stage img {
+    max-width: 100%;
     height: auto;
-    margin-top: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-/* Floating Hearts Animation */
-.hearts-bg {
-    position: relative;
-    overflow: hidden;
-    animation: hearts-float 5s infinite linear;
+/* Jumping Button Animation */
+.jumping {
+    position: absolute;
 }
 
-@keyframes hearts-float {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Shaking Effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
 .shake-bg {
     animation: shake 0.5s infinite;
 }
 
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-}
-
-/* Wiggly Background */
 .wiggle-bg {
-    animation: wiggle 1s infinite alternate;
+    animation: wiggle 0.5s infinite;
 }
 
-@keyframes wiggle {
-    0% { transform: rotate(-3deg); }
-    100% { transform: rotate(3deg); }
-}
-
-/* Confetti Celebration */
 .confetti-bg {
-    animation: confetti-fall 3s infinite;
-    background-image: url('https://i.imgur.com/dQw4w9h.gif'); /* Replace with confetti GIF */
-    background-size: cover;
+    background: url('https://i.giphy.com/media/3o7TKRwpns23QMNNiE/giphy.gif') center/cover;
 }
 
-@keyframes confetti-fall {
-    0% { background-position: 0 -100px; }
-    100% { background-position: 0 100vh; }
+.hearts-bg {
+    background: url('https://i.giphy.com/media/l0HlKmbZ1HjB65TcI/giphy.gif') center/cover;
 }
+
 
 
