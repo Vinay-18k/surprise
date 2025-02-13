@@ -7,44 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Hello Best Friend!!!</h1>
+        <p class="subtitle">Happy Valentine's Day without a Valentine. 😂</p>
+        <button id="startButton">Click here for something</button>
+        
+        <div id="stage1" class="hidden stage">
+            <p>Do you need a Valentine?</p>
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+        </div>
+        
+        <div id="stage2" class="hidden stage">
+            <p>Sorry...! Do you really need a Valentine?</p>
+            <button id="yesButton2">Yes</button>
+            <button id="noButton2">No</button>
+        </div>
 
-    <h1>Hello Best Friend!!!</h1>
-    <p class="subtitle">Happy Valentine's Day without a Valentine. 😂</p>
+        <div id="stage3" class="hidden stage">
+            <p>Shut up! That's not possible. Listen to me, you don't need a Valentine...</p>
+            <p>So now, do you really need one?</p>
+            <button id="yesButton3" class="jumping">Yes</button>
+            <button id="noButton3">No</button>
+        </div>
 
-    <button id="startButton">Click here for something</button>
-
-    <div id="stage1" class="hidden stage hearts-bg">
-        <div class="hearts"></div>
-        <img src="https://media4.giphy.com/media/XHFzB9t4wDlKqrfQ58/giphy.gif" alt="Cute Heart">
-        <p>Do you need a Valentine?</p>
-        <button id="yes1">Yes</button>
-        <button id="no1">No</button>
+        <div id="finalStage" class="hidden stage">
+            <p>You don’t need any Valentine because you have your best friend! ❤️</p>
+            <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" alt="Best Friends Forever">
+        </div>
     </div>
-
-    <div id="stage2" class="hidden stage shake-bg">
-        <img src="https://i.giphy.com/media/l41lFw057lAJQMwg0/giphy.gif" alt="Thinking Face">
-        <p>Sorry...! Do you really need a Valentine? 🤔</p>
-        <button id="yes2">Yes</button>
-        <button id="no2">No</button>
-    </div>
-
-    <div id="stage3" class="hidden stage wiggle-bg">
-        <img src="https://i.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" alt="Pleading Face">
-        <p>Shut up, that’s not possible. 😆</p>
-        <p>Listen to me, you don’t need a Valentine...</p>
-        <p>So now say, do you really need one?</p>
-        <button id="yes3" class="jumping">Yes</button>
-        <button id="no3">No</button>
-    </div>
-
-    <div id="finalStage" class="hidden stage confetti-bg">
-        <div class="confetti"></div>
-        <img src="https://i.giphy.com/media/l0ExvMq5CFx68iTeE/giphy.gif" alt="Happy Friends">
-        <p>You don’t need any Valentine because you have your best friend! ❤️</p>
-    </div>
-
+    
     <script src="script.js"></script>
-
 </body>
 </html>
 
