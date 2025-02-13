@@ -26,40 +26,13 @@ document.getElementById("noButton2").addEventListener("click", function() {
     document.getElementById("finalStage").classList.remove("hidden");
 });
 
-// Stage 3 buttons
+// Stage 3 (FIXED: Only the "No" button will proceed)
 document.getElementById("noButton3").addEventListener("click", function() {
     document.getElementById("stage3").classList.add("hidden");
     document.getElementById("finalStage").classList.remove("hidden");
 });
 
-// Moving "Yes" button in stage 3
-let yesButton3 = document.getElementById("yesButton3");
-let moveCount = 0;
-yesButton3.addEventListener("mouseover", function() {
-    moveCount++;
-    let offsetX = (Math.random() * 200 - 100) + "px";
-    let offsetY = (Math.random() * 100 - 50) + "px";
-    yesButton3.style.transform = `translate(${offsetX}, ${offsetY})`;
-    if (moveCount >= 3) {
-        yesButton3.removeEventListener("mouseover", arguments.callee);
-        alert("Haha! You can't catch me! 😜");
-    }
+// Show final gift message
+document.getElementById("giftButton").addEventListener("click", function() {
+    document.getElementById("giftMessage").classList.remove("hidden");
 });
-
-// Floating emojis
-function createEmoji() {
-    const emojis = ["❤️", "💌", "🌹", "🎀", "💘", "💝", "💖", "💕"];
-    const emojiContainer = document.getElementById("emojiContainer");
-
-    for (let i = 0; i < 5; i++) {
-        const emoji = document.createElement("div");
-        emoji.classList.add("emoji");
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        emoji.style.left = `${Math.random() * 90}vw`;
-        emojiContainer.appendChild(emoji);
-    }
-}
-
-createEmoji();
-
-
