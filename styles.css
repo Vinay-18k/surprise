@@ -1,4 +1,3 @@
-/* General Styling */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
@@ -11,17 +10,13 @@ body {
     height: 100vh;
 }
 
-/* Main Container */
 .container {
     background-color: white;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Heading & Subtitle */
 h1 {
     color: #ff1493;
     font-size: 2.5em;
@@ -34,7 +29,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Buttons */
 button {
     padding: 10px 20px;
     font-size: 1em;
@@ -52,27 +46,22 @@ button:hover {
     background-color: #ff1493;
 }
 
-/* Hide elements */
 .hidden {
     display: none;
 }
 
-/* Cat GIFs */
-.cat-gif {
-    margin: 20px auto;
-    text-align: center;
-}
-
-.cat-gif img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Jumping Yes Button */
 #yesButton3 {
     position: relative;
+}
+
+#finalStage img {
+    margin-top: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.jumping {
     animation: jump 0.5s infinite alternate;
 }
 
@@ -82,42 +71,6 @@ button:hover {
     }
     100% {
         transform: translateY(-10px);
-    }
-}
-
-/* Floating Emojis */
-#emojiContainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.emoji {
-    position: absolute;
-    font-size: 24px;
-    animation: float 5s linear infinite, fade 5s ease-in infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(-10%);
-    }
-    100% {
-        transform: translateY(110%);
-    }
-}
-
-@keyframes fade {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
     }
 }
 
