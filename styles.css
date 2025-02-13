@@ -1,72 +1,128 @@
-document.getElementById("startButton").addEventListener("click", function() {
-    document.getElementById("stage1").classList.remove("hidden");
-});
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-color: #ffcccb;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-document.getElementById("yesButton").addEventListener("click", function() {
-    document.getElementById("stage1").classList.add("hidden");
-    document.getElementById("stage2").classList.remove("hidden");
-});
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
 
-document.getElementById("noButton").addEventListener("click", function() {
-    document.getElementById("stage1").classList.add("hidden");
-    document.getElementById("finalStage").classList.remove("hidden");
-});
+h1 {
+    color: #ff1493;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-document.getElementById("yesButton2").addEventListener("click", function() {
-    document.getElementById("stage2").classList.add("hidden");
-    document.getElementById("stage3").classList.remove("hidden");
-});
+.subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
 
-document.getElementById("noButton2").addEventListener("click", function() {
-    document.getElementById("stage2").classList.add("hidden");
-    document.getElementById("finalStage").classList.remove("hidden");
-});
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 10px;
+    border: none;
+    background-color: #ff69b4;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
 
-document.getElementById("noButton3").addEventListener("click", function() {
-    document.getElementById("stage3").classList.add("hidden");
-    document.getElementById("finalStage").classList.remove("hidden");
-});
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff1493;
+}
 
-let yesButton3 = document.getElementById("yesButton3");
-let moveCount = 0;
-yesButton3.addEventListener("mouseover", function() {
-    moveCount++;
-    let offsetX = (Math.random() * 200 - 100) + "px";
-    let offsetY = (Math.random() * 100 - 50) + "px";
-    yesButton3.style.transform = `translate(${offsetX}, ${offsetY})`;
-    if (moveCount >= 3) {
-        yesButton3.removeEventListener("mouseover", arguments.callee);
-        alert("Haha! You can't catch me! 😜");
+.hidden {
+    display: none;
+}
+
+#yesButton3 {
+    position: relative;
+    animation: jump 0.5s infinite alternate;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
     }
-});
-// Existing JavaScript remains the same
-
-// Function to create jumping emojis
-function createEmoji() {
-    const emojis = ["❤️", "💌", "🌹", "🎀", "💘", "💝", "💖", "💕"];
-    const emojiContainer = document.getElementById("emojiContainer");
-
-    // Create 5 emojis
-    for (let i = 0; i < 5; i++) {
-        const emoji = document.createElement("div");
-        emoji.classList.add("emoji");
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        emoji.style.left = `${Math.random() * 90}vw`; // Random horizontal position
-        emoji.style.top = `${Math.random() * 90}vh`; // Random vertical position
-        emoji.style.animationDuration = `${Math.random() * 2 + 1}s`; // Random speed
-
-        emojiContainer.appendChild(emoji);
-
-        // Make emojis move around randomly
-        setInterval(() => {
-            emoji.style.left = `${Math.random() * 90}vw`;
-            emoji.style.top = `${Math.random() * 90}vh`;
-        }, 3000); // Change position every 3 seconds
+    100% {
+        transform: translateY(-10px);
     }
 }
 
-// Call the function to create emojis
-createEmoji();
+#finalStage img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+/* Existing CSS remains the same */
+
+/* Emoji Container */
+#emojiContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.emoji {
+    position: absolute;
+    font-size: 24px;
+    animation: float 5s linear infinite, fade 5s ease-in infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(110%);
+    }
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* Existing CSS remains the same */
+
+/* Cat GIF Styles */
+.cat-gif {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.cat-gif img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 
