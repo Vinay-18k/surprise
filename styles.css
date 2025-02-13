@@ -1,4 +1,4 @@
-/* General styling */
+/* General Styling */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
@@ -11,7 +11,7 @@ body {
     height: 100vh;
 }
 
-/* Container for content */
+/* Main Container */
 .container {
     background-color: white;
     padding: 30px;
@@ -21,7 +21,7 @@ body {
     width: 100%;
 }
 
-/* Heading and subtitle */
+/* Heading & Subtitle */
 h1 {
     color: #ff1493;
     font-size: 2.5em;
@@ -52,12 +52,12 @@ button:hover {
     background-color: #ff1493;
 }
 
-/* Hidden class to hide elements */
+/* Hide elements */
 .hidden {
     display: none;
 }
 
-/* Cat GIF styles */
+/* Cat GIFs */
 .cat-gif {
     margin: 20px auto;
     text-align: center;
@@ -70,7 +70,7 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Jumping animation for Yes button in stage 3 */
+/* Jumping Yes Button */
 #yesButton3 {
     position: relative;
     animation: jump 0.5s infinite alternate;
@@ -85,7 +85,7 @@ button:hover {
     }
 }
 
-/* Floating emoji animation */
+/* Floating Emojis */
 #emojiContainer {
     position: fixed;
     top: 0;
@@ -120,3 +120,4 @@ button:hover {
         opacity: 1;
     }
 }
+
