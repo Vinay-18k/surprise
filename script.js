@@ -31,11 +31,13 @@ document.getElementById("noButton3").addEventListener("click", function() {
     document.getElementById("finalStage").classList.remove("hidden");
 });
 
-// Gift Button - Works on both mobile & desktop
+// Gift Button - Shows gift message without affecting the final stage
 document.getElementById("giftButton").addEventListener("click", showGift);
 document.getElementById("giftButton").addEventListener("touchstart", showGift);
 
-function showGift() {
+function showGift(event) {
+    event.stopPropagation(); // Prevents any unintended hiding of content
     document.getElementById("giftMessage").classList.remove("hidden");
 }
+
 
