@@ -1,5 +1,5 @@
 document.getElementById("startButton").addEventListener("click", function() {
-    this.classList.add("hidden");
+    document.getElementById("intro").classList.add("hidden"); // Hide the intro section
     document.getElementById("stage1").classList.remove("hidden");
 });
 
@@ -55,3 +55,4 @@ function createEmoji() {
 }
 
 setInterval(createEmoji, 2000);
+
